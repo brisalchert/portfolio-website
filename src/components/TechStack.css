@@ -1,0 +1,21 @@
+.tech-stack {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.tech-stack__icon {
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.tech-stack__icon:hover {
+  transform: scale(1.2);
+}
