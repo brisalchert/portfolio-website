@@ -13,9 +13,29 @@
   height: 150px;
   box-sizing: border-box;
   padding: 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s;
+}
+
+.tech-stack__icon-wrapper {
+  animation: logo-spin infinite 20s linear;
 }
 
 .tech-stack__icon:hover {
-  transform: scale(1.2);
+  transform: scale(0.8);
+  filter: drop-shadow(0 0 2em rebeccapurple) blur(3px);
 }
+
+.tech-stack__icon:nth-of-type(8):hover {
+  transform: scale(0.8) rotate(0deg);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+

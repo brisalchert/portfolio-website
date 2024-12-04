@@ -11,7 +11,9 @@ export default function TechStack() {
       <StackIcon className="tech-stack__icon" name="html5" />
       <StackIcon className="tech-stack__icon" name="css3" />
       <StackIcon className="tech-stack__icon" name="js" />
-      <StackIcon className="tech-stack__icon" name="reactjs" />
+      <div className="tech-stack__icon-wrapper">
+        <StackIcon className="tech-stack__icon" name="reactjs" />
+      </div>
     </div>
   )
 }
