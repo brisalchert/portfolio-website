@@ -15,23 +15,25 @@ export default function TechStack() {
 
     return (
       <div className="tech-stack">
-        <p className="tech-stack__title">My Technology Stack</p>
-        <div className="tech-stack__body">
-          {iconNames.map((name, index) => (
-            name === "reactjs" ? (
-              <div key={index} className="tech-stack__icon-container">
-                <div className="tech-stack__icon-wrapper">
-                  <TechStackIcon iconName={name}/>
+        <div className="tech-stack__container">
+          <p className="tech-stack__title">My Technology Stack</p>
+          <div className="tech-stack__body">
+            {iconNames.map((name, index) => (
+              name === "reactjs" ? (
+                <div key={index} className="tech-stack__icon-container">
+                  <div className="tech-stack__icon-wrapper">
+                    <TechStackIcon iconName={name}/>
+                  </div>
+                  <p className="tech-stack__text">{textNames[index]}</p>
                 </div>
-                <p className="tech-stack__text">{textNames[index]}</p>
-              </div>
-            ) : (
-              <div key={index} className="tech-stack__icon-container">
-                <TechStackIcon key={index} iconName={name}/>
-                <p className="tech-stack__text">{textNames[index]}</p>
-              </div>
-            )
-          ))}
+              ) : (
+                <div key={index} className="tech-stack__icon-container">
+                  <TechStackIcon key={index} iconName={name}/>
+                  <p className="tech-stack__text">{textNames[index]}</p>
+                </div>
+              )
+            ))}
+          </div>
         </div>
       </div>
     )
