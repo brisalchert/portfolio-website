@@ -27,6 +27,7 @@
   margin: 0 16px;
   text-decoration: none;
   transition: transform 0.3s ease, filter 0.3s;
+  cursor: pointer;
 }
 
 .nav-header a:hover {

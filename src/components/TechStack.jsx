@@ -9,8 +9,10 @@ import Pandas from "../assets/pandas.png"
 import Pytorch from "../assets/pytorch.png"
 import ScikitLearn from "../assets/scikit-learn.png"
 import "./TechStack.css";
+import {forwardRef} from "react";
 
-export default function TechStack() {
+// eslint-disable-next-line react/display-name
+const TechStack = forwardRef ((props, ref) => {
   const iconList = () => {
     const techIconNames = [
       "python", "java", "postgresql", "git",
@@ -30,7 +32,7 @@ export default function TechStack() {
     ];
 
     return (
-      <div className="tech-stack">
+      <div className="tech-stack" ref={ref}>
         <div className="tech-stack__container">
           <p className="tech-stack__title">My Technology Stack</p>
           <div className="tech-stack__body">
@@ -67,7 +69,9 @@ export default function TechStack() {
   }
 
   return iconList();
-}
+});
+
+export default TechStack;
 
 function TechStackIcon({ iconName }) {
   TechStackIcon.propTypes = {

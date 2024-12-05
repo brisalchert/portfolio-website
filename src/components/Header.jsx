@@ -1,12 +1,13 @@
 import './Header.css';
 
-export default function Header() {
+// eslint-disable-next-line react/prop-types
+export default function Header({ onLanguagesClick, onProjectsClick }) {
   return (
     <nav className="nav-header">
       <p>Brian Salchert</p>
       <ul>
-        <li><a href="#languages">Languages</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a onClick={onLanguagesClick}>Languages</a></li>
+        <li><a onClick={onProjectsClick}>Projects</a></li>
       </ul>
     </nav>
   );
