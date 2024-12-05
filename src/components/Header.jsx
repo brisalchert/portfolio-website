@@ -6,7 +6,7 @@ export default function Header({ onLanguagesClick, onProjectsClick }) {
     <nav className="nav-header">
       <p>Brian Salchert</p>
       <ul>
-        <li><a onClick={onLanguagesClick}>Languages</a></li>
+        <li><a onClick={onLanguagesClick}>Languages & Tools</a></li>
         <li><a onClick={onProjectsClick}>Projects</a></li>
       </ul>
     </nav>
