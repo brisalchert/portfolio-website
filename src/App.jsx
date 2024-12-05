@@ -3,6 +3,7 @@ import './App.css';
 import Header from "./components/Header.jsx";
 import TechStack from "./components/TechStack.jsx";
 import About from "./components/About.jsx";
+import Projects from "./components/Projects.jsx";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
       <Header onLanguagesClick={onLanguagesClick} onProjectsClick={onProjectsClick} />
       <About />
       <TechStack ref={languagesRef}/>
+      <Projects ref={projectsRef}/>
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
