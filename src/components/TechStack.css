@@ -32,10 +32,6 @@
   filter: drop-shadow(0 0 2em rebeccapurple) blur(3px);
 }
 
-.tech-stack__icon-container:nth-of-type(8):hover .tech-stack__icon {
-  transform: scale(0.8) rotate(0deg);
-}
-
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
