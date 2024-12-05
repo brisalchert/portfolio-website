@@ -1,16 +1,32 @@
 import PropTypes from 'prop-types';
 import StackIcon from "tech-stack-icons";
+import Intellij from "../assets/intellij-idea.png"
+import Pycharm from "../assets/pycharm.png"
+import VSCode from "../assets/vscode.png"
+import Numpy from "../assets/numpy.png"
+import Matplotlib from "../assets/matplotlib.png"
+import Pandas from "../assets/pandas.png"
+import Pytorch from "../assets/pytorch.png"
+import ScikitLearn from "../assets/scikit-learn.png"
 import "./TechStack.css";
 
 export default function TechStack() {
   const iconList = () => {
-    const iconNames = [
+    const techIconNames = [
       "python", "java", "postgresql", "git",
       "html5", "css3", "js", "reactjs"
     ];
-    const textNames = [
-      "Python", "Java", "SQL\n(PostgreSQL)", "Git",
+    const techTextNames = [
+      "Python", "Java", "SQL (PostgreSQL)", "Git",
       "HTML", "CSS", "JavaScript", "React"
+    ];
+    const toolIconNames = [
+      Intellij, Pycharm, VSCode, Numpy,
+      Matplotlib, Pandas, Pytorch, ScikitLearn
+    ];
+    const toolTextNames = [
+      "IntelliJ", "PyCharm", "VS Code", "Numpy",
+      "Matplotlib", "Pandas", "PyTorch", "Scikit-Learn"
     ];
 
     return (
@@ -18,20 +34,31 @@ export default function TechStack() {
         <div className="tech-stack__container">
           <p className="tech-stack__title">My Technology Stack</p>
           <div className="tech-stack__body">
-            {iconNames.map((name, index) => (
+            {techIconNames.map((name, index) => (
               name === "reactjs" ? (
                 <div key={index} className="tech-stack__icon-container">
                   <div className="tech-stack__icon-wrapper">
                     <TechStackIcon iconName={name}/>
                   </div>
-                  <p className="tech-stack__text">{textNames[index]}</p>
+                  <p className="tech-stack__text">{techTextNames[index]}</p>
                 </div>
               ) : (
                 <div key={index} className="tech-stack__icon-container">
-                  <TechStackIcon key={index} iconName={name}/>
-                  <p className="tech-stack__text">{textNames[index]}</p>
+                  <TechStackIcon iconName={name}/>
+                  <p className="tech-stack__text">{techTextNames[index]}</p>
                 </div>
               )
+            ))}
+          </div>
+        </div>
+        <div className="tech-stack__container">
+          <p className="tech-stack__title">The Tools I Use</p>
+          <div className="tech-stack__body">
+            {toolIconNames.map((name, index) => (
+              <div key={index} className="tech-stack__icon-container">
+                <ToolStackIcon iconName={name}/>
+                <p className="tech-stack__text">{toolTextNames[index]}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -42,14 +69,26 @@ export default function TechStack() {
   return iconList();
 }
 
-function TechStackIcon({iconName}) {
+function TechStackIcon({ iconName }) {
   TechStackIcon.propTypes = {
-    iconName: PropTypes.string.isRequired,
+    iconName: PropTypes.string.isRequired
   }
 
   return (
     <div className="tech-stack__icon">
       <StackIcon name={iconName}/>
+    </div>
+  );
+}
+
+function ToolStackIcon({ iconName }) {
+  ToolStackIcon.propTypes = {
+    iconName: PropTypes.object
+  }
+
+  return (
+    <div className="tech-stack__icon-tool">
+      <img src={iconName} alt="Tool Stack Icon"/>
     </div>
   );
 }
