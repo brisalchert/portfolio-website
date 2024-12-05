@@ -52,7 +52,7 @@ export default function TechStack() {
           </div>
         </div>
         <div className="tech-stack__container">
-          <p className="tech-stack__title">The Tools I Use</p>
+          <p className="tech-stack__title">Some of the Tools I Use</p>
           <div className="tech-stack__body">
             {toolIconNames.map((name, index) => (
               <div key={index} className="tech-stack__icon-container">
@@ -83,7 +83,7 @@ function TechStackIcon({ iconName }) {
 
 function ToolStackIcon({ iconName }) {
   ToolStackIcon.propTypes = {
-    iconName: PropTypes.object
+    iconName: PropTypes.string.isRequired
   }
 
   return (
