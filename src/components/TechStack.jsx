@@ -16,7 +16,7 @@ export default function TechStack() {
     return (
       <div className="tech-stack">
         {iconNames.map((name, index) => (
-          index === 7 ? (
+          name === "reactjs" ? (
             <div key={index} className="tech-stack__icon-container">
               <div className="tech-stack__icon-wrapper">
                 <TechStackIcon iconName={name}/>
