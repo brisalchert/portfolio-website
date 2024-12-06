@@ -19,19 +19,31 @@
 .projects__item {
   margin: 40px 0 100px;
   box-sizing: content-box;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
 }
 
 .projects__card {
   position: relative;
   width: 800px;
   height: 500px;
-  display: flex;
-  background: grey;
-  border-radius: 20px;
-  overflow: hidden;
 }
 
-.projects__card:hover .projects__info {
+.projects__image {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+.projects__item:hover .projects__image {
+  transform: scale(1.05);
+  filter: blur(3px);
+}
+
+.projects__item:hover .projects__info {
   transform: translate(-100%);
 }
 
@@ -39,8 +51,7 @@
   position: absolute;
   width: 60%;
   height: 100%;
-  background: black;
-  opacity: 0.6;
+  background: rgba(0, 0, 0, 0.8);
   translate: 800px;
   transition: 0.3s ease;
   box-sizing: border-box;
@@ -51,7 +62,6 @@
   font-size: 30px;
   font-weight: bold;
   text-align: left;
-  opacity: 1.0;
 }
 
 .projects__description {
