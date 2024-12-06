@@ -2,6 +2,7 @@ import "./Projects.css"
 import {forwardRef} from "react";
 import PropTypes from "prop-types";
 import clothingStore from "../assets/mock-store.png"
+import mazeSolver from "../assets/maze-solver.png"
 
 // eslint-disable-next-line react/display-name
 const Projects = forwardRef((props, ref) => {
@@ -26,7 +27,7 @@ const Projects = forwardRef((props, ref) => {
         "them using several traversal algorithms. The application includes a user interface created using PyQt6 " +
         "and includes a 'slow factor' that slows down the generation and traversal algorithms to allow the user " +
         "to watch them work.",
-      projectImage: null,
+      projectImage: mazeSolver,
       projectURL: "https://github.com/brisalchert/maze-solver"
     },
     {
