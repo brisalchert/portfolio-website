@@ -54,12 +54,14 @@ const Projects = forwardRef((props, ref) => {
       <p className="projects-title">Here are some of my projects</p>
       <div className="projects__container">
         {projects.map((project, index) => (
-          <a href={project["projectURL"]} key={index} target="_blank">
-            <div className="projects__item">
-              <img src={project["projectImage"]} className="projects__image" alt={project["projectTitle"]}/>
-              <ProjectCard title={project["projectTitle"]} description={project["projectDescription"]}/>
-            </div>
-          </a>
+          <div className="projects__anchor-wrapper" key={index}>
+            <a href={project["projectURL"]} target="_blank">
+              <div className="projects__item">
+                <img src={project["projectImage"]} className="projects__image" alt={project["projectTitle"]}/>
+                <ProjectCard title={project["projectTitle"]} description={project["projectDescription"]}/>
+              </div>
+            </a>
+          </div>
         ))}
       </div>
     </div>
@@ -68,7 +70,7 @@ const Projects = forwardRef((props, ref) => {
 
 export default Projects;
 
-function ProjectCard({ title, description }) {
+function ProjectCard({title, description}) {
   ProjectCard.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string

@@ -12,30 +12,36 @@
 }
 
 .projects__container {
-  margin: 0 auto;
   max-width: 800px;
+  margin: 0 auto;
+}
+
+.projects__anchor-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 100px;
 }
 
 .projects__item {
-  margin: 40px 0 100px;
-  box-sizing: content-box;
+  height: 600px;
+  min-width: 400px;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
   color: white;
+  display: flex;
+  background: #242424;
 }
 
 .projects__card {
-  position: relative;
-  width: 800px;
-  height: 500px;
+  height: 100%;
+  width: 100%;
+  margin-left: -100%;
 }
 
 .projects__image {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
+  max-height: 100%;
+  max-width: 100%;
   transition: 0.3s ease;
 }
 
@@ -53,7 +59,7 @@
   width: 60%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  translate: 800px;
+  left: 100%;
   transition: 0.3s ease;
   box-sizing: border-box;
   padding: 15px;
