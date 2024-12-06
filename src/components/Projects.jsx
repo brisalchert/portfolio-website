@@ -3,6 +3,9 @@ import {forwardRef} from "react";
 import PropTypes from "prop-types";
 import clothingStore from "../assets/mock-store.png"
 import mazeSolver from "../assets/maze-solver.png"
+import audioCNN from "../assets/audio-cnn.png"
+import lstm from "../assets/lstm.png"
+import sudoku from "../assets/sudoku.png"
 
 // eslint-disable-next-line react/display-name
 const Projects = forwardRef((props, ref) => {
@@ -11,14 +14,14 @@ const Projects = forwardRef((props, ref) => {
       projectTitle: "LSTM Text Classifier",
       projectDescription: "A long short-term memory recurrent neural network for classifying text as either" +
         "AI-generated or human-written.",
-      projectImage: null,
+      projectImage: lstm,
       projectURL: "https://github.com/brisalchert/ai-text-classification"
     },
     {
       projectTitle: "Sudoku Desktop Application",
       projectDescription: "A Java desktop application for playing Sudoku. Uses a backtracking algorithm to generate " +
         "randomized game boards with only one valid solution.",
-      projectImage: null,
+      projectImage: sudoku,
       projectURL: "https://github.com/brisalchert/SudokuDesktopApplication"
     },
     {
@@ -34,7 +37,7 @@ const Projects = forwardRef((props, ref) => {
       projectTitle: "Battlefield Audio Classifier",
       projectDescription: "A convolutional neural network for classifying sound samples as one of five different " +
         "types of audio from a battlefield setting. This project uses Tensorflow for machine learning.",
-      projectImage: null,
+      projectImage: audioCNN,
       projectURL: "https://github.com/brisalchert/BattlefieldAudioClassification"
     },
     {

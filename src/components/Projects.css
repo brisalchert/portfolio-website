@@ -23,7 +23,6 @@
 }
 
 .projects__item {
-  height: 600px;
   min-width: 400px;
   border-radius: 20px;
   overflow: hidden;
