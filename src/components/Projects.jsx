@@ -54,7 +54,7 @@ const Projects = forwardRef((props, ref) => {
 
   return (
     <div className="projects" ref={ref}>
-      <p className="projects-title">Here are some of my projects</p>
+      <p className="projects-title">Here are some projects I&#39;ve worked on</p>
       <div className="projects__container">
         {projects.map((project, index) => (
           <div className="projects__anchor-wrapper" key={index}>
