@@ -1,4 +1,5 @@
 import profileImage from "../assets/profile.jpg"
+import aboutArt from "../assets/undraw_data_processing.svg"
 import "./About.css"
 
 export default function About() {
@@ -14,6 +15,7 @@ export default function About() {
           </p>
         </div>
       </div>
+      <img className="about__art" src={aboutArt} alt="Undraw Data Art"/>
     </div>
   )
 }

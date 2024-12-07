@@ -38,3 +38,8 @@
   box-sizing: border-box;
   padding: 0 40px;
 }
+
+.about__art {
+  margin: 150px;
+  translate: -75px;
+}
