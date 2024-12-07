@@ -1,11 +1,12 @@
 import "./Projects.css"
-import {forwardRef} from "react";
-import PropTypes from "prop-types";
+import {forwardRef, useState} from "react";
+import PropTypes, {func, object} from "prop-types";
 import clothingStore from "../assets/mock-store.png"
 import mazeSolver from "../assets/maze-solver.png"
 import audioCNN from "../assets/audio-cnn.png"
 import lstm from "../assets/lstm.png"
 import sudoku from "../assets/sudoku.png"
+import arrow from "../assets/arrow.png"
 
 // eslint-disable-next-line react/display-name
 const Projects = forwardRef((props, ref) => {
@@ -50,28 +51,82 @@ const Projects = forwardRef((props, ref) => {
       projectImage: clothingStore,
       projectURL: "https://github.com/brisalchert/Data-Structures-Project"
     }
-  ]
+  ];
+
+  const [carouselLeft, setCarouselLeft] = useState(0);
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const [leftEnabled, setLeftEnabled] = useState(false);
+  const [rightEnabled, setRightEnabled] = useState(true);
+
+  const onLeftArrowClicked = () => {
+    setCarouselLeft(carouselLeft + 800);
+    setCarouselIndex(carouselIndex - 1);
+
+    // Update happens after method completes
+    if (carouselIndex === 1) {
+      setLeftEnabled(false);
+    }
+
+    if (!rightEnabled) {
+      setRightEnabled(true);
+    }
+  };
+
+  const onRightArrowClicked = () => {
+    setCarouselLeft(carouselLeft - 800);
+    setCarouselIndex(carouselIndex + 1);
+
+    // Update happens after method completes
+    if (carouselIndex === projects.length - 2) {
+      setRightEnabled(false);
+    }
+
+    if (!leftEnabled) {
+      setLeftEnabled(true);
+    }
+  };
 
   return (
     <div className="projects" ref={ref}>
       <p className="projects-title">Here are some projects I&#39;ve worked on</p>
       <div className="projects__container">
-        {projects.map((project, index) => (
-          <div className="projects__anchor-wrapper" key={index}>
-            <a href={project["projectURL"]} target="_blank">
-              <div className="projects__item">
-                <img src={project["projectImage"]} className="projects__image" alt={project["projectTitle"]}/>
-                <ProjectCard title={project["projectTitle"]} description={project["projectDescription"]}/>
-              </div>
-            </a>
-          </div>
-        ))}
+        <Arrow left={true} onClick={onLeftArrowClicked} enabled={leftEnabled}/>
+        <div className="projects__carousel">
+          <CarouselTrack projects={projects} left={carouselLeft}/>
+        </div>
+        <Arrow left={false} onClick={onRightArrowClicked} enabled={rightEnabled}/>
       </div>
     </div>
   )
 });
 
 export default Projects;
+
+function CarouselTrack({ projects, left }) {
+  CarouselTrack.propTypes = {
+    projects: PropTypes.arrayOf(PropTypes.object),
+    left: PropTypes.number
+  }
+
+  const style = {
+    transform: `translateX(${left}px)`,
+  }
+
+  return (
+    <div className="projects__carousel-track" style={style}>
+      {projects.map((project, index) => (
+        <div className="projects__carousel-slide" key={index}>
+          <a href={project["projectURL"]} target="_blank">
+            <div className="projects__item">
+              <img src={project["projectImage"]} className="projects__image" alt={project["projectTitle"]}/>
+              <ProjectCard title={project["projectTitle"]} description={project["projectDescription"]}/>
+            </div>
+          </a>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 function ProjectCard({title, description}) {
   ProjectCard.propTypes = {
@@ -87,4 +142,22 @@ function ProjectCard({title, description}) {
       </div>
     </div>
   )
+}
+
+function Arrow({onClick, left, enabled}) {
+  Arrow.propTypes = {
+    onClick: func,
+    left: PropTypes.bool,
+    enabled: PropTypes.bool
+  };
+
+  if (left) {
+    return (
+      <img className={`projects__arrow-left ${enabled ? "enabled" : "disabled"}`} src={arrow} alt="Left Arrow" onClick={onClick}/>
+    );
+  } else {
+    return (
+      <img className={`projects__arrow-right ${enabled ? "enabled" : "disabled"}`} src={arrow} alt="Right Arrow" onClick={onClick}/>
+    );
+  }
 }
