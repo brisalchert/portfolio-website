@@ -1,4 +1,4 @@
-import profileImage from "../assets/react.svg"
+import profileImage from "../assets/profile.jpg"
 import "./About.css"
 
 export default function About() {
