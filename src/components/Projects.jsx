@@ -1,6 +1,6 @@
 import "./Projects.css"
 import {forwardRef, useState} from "react";
-import PropTypes, {func, object} from "prop-types";
+import PropTypes from "prop-types";
 import clothingStore from "../assets/mock-store.png"
 import mazeSolver from "../assets/maze-solver.png"
 import audioCNN from "../assets/audio-cnn.png"
@@ -146,7 +146,7 @@ function ProjectCard({title, description}) {
 
 function Arrow({onClick, left, enabled}) {
   Arrow.propTypes = {
-    onClick: func,
+    onClick: PropTypes.func,
     left: PropTypes.bool,
     enabled: PropTypes.bool
   };
