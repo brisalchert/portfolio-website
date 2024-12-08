@@ -120,16 +120,25 @@
   left: 100%;
   transition: 0.3s ease;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 0 10px 10px 10px;
 }
 
 .projects__name {
   font-size: 30px;
   font-weight: bold;
   text-align: left;
+  margin: 10px 0;
+}
+
+.projects__tools {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  margin: 10px 0;
 }
 
 .projects__description {
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
+  margin: 10px 0;
 }
