@@ -1,5 +1,5 @@
 import profileImage from "../assets/profile.jpg"
-import aboutArt from "../assets/undraw_data_processing.svg"
+import aboutArt from "../assets/undraw_all_the_data.svg"
 import "./About.css"
 
 export default function About() {
