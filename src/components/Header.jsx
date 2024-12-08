@@ -2,9 +2,14 @@ import './Header.css';
 import linkedin from "../assets/linkedin.png"
 import github from "../assets/github.png"
 import resume from "../assets/resume.png"
+import PropTypes from "prop-types";
 
-// eslint-disable-next-line react/prop-types
 export default function Header({ onLanguagesClick, onProjectsClick }) {
+  Header.propTypes = {
+    onLanguagesClick: PropTypes.func,
+    onProjectsClick: PropTypes.func
+  }
+
   return (
     <div className="header">
       <nav className="header__nav">
