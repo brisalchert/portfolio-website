@@ -4,9 +4,9 @@ import Header from "./components/Header.jsx";
 import TechStack from "./components/TechStack.jsx";
 import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
   const languagesRef = useRef(null);
   const projectsRef = useRef(null);
   const onLanguagesClick = () => {
@@ -22,18 +22,7 @@ function App() {
       <About />
       <TechStack ref={languagesRef}/>
       <Projects ref={projectsRef}/>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Footer />
     </>
   )
 }
