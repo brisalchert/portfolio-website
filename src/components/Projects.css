@@ -83,7 +83,6 @@
 }
 
 .projects__item {
-  min-height: 400px;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -115,7 +114,7 @@
 
 .projects__info {
   position: absolute;
-  width: 60%;
+  width: 70%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
   left: 100%;
