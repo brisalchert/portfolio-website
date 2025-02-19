@@ -7,11 +7,23 @@ import mazeSolver from "../assets/maze-solver.png"
 import audioCNN from "../assets/audio-cnn.png"
 import lstm from "../assets/lstm.png"
 import sudoku from "../assets/sudoku.png"
+import solar from "../assets/solar-system.png"
 import arrow from "../assets/arrow.png"
 
 // eslint-disable-next-line react/display-name
 const Projects = forwardRef((props, ref) => {
   const projects = [
+    {
+      projectTitle: "Solar System Simulation",
+      projectTools: "WebGL, JavaScript, HTML, CSS, Linear Algebra",
+      projectDescription: "A simulation of the Solar System built using WebGL -- the web-based version of the " +
+        "OpenGL graphics library.\n\nThe program utilizes a rendering loop to continually update the scene, " +
+        "allowing the planets to orbit the Sun. Additionally, the application uses matrix multiplication " +
+        "within the shaders to achieve object transformations and implements the Phong Lighting Model " +
+        "for advanced lighting and shading.",
+      projectImage: solar,
+      projectURL: "https://github.com/brisalchert/CSC405"
+    },
     {
       projectTitle: "LSTM Text Classifier",
       projectTools: "Python, PyTorch, Machine Learning, NLP, Pandas, Seaborn, Matplotlib, PyCharm",
