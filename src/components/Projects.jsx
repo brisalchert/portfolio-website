@@ -8,11 +8,24 @@ import audioCNN from "../assets/audio-cnn.png"
 import lstm from "../assets/lstm.png"
 import sudoku from "../assets/sudoku.png"
 import solar from "../assets/solar-system.png"
+import steamTracker from "../assets/steam-tracker.png"
 import arrow from "../assets/arrow.png"
 
 // eslint-disable-next-line react/display-name
 const Projects = forwardRef((props, ref) => {
   const projects = [
+    {
+      projectTitle: "Steam Tracker Android Application",
+      projectTools: "Kotlin, Room Database, Retrofit, Android Studio",
+      projectDescription: "An Android application utilizing various web APIs to provide users with information " +
+        "about the latest news and sales for games on Steam -- the world's largest PC game digital distribution " +
+        "platform.\n\nThe program saves relevant information to a local SQLite database to reduce network request " +
+        "volume and improve performance. It also allows the user to search Steam's store, add games to their " +
+        "wishlist, favorites, or a custom collection, and get personalized recommendations based on their favorite " +
+        "genres.",
+      projectImage: steamTracker,
+      projectURL: "https://github.com/brisalchert/CSC475/tree/main/Module6/SteamTracker"
+    },
     {
       projectTitle: "Solar System Simulation",
       projectTools: "WebGL, JavaScript, HTML, CSS, Linear Algebra",

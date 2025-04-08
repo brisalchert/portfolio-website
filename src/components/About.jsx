@@ -10,7 +10,7 @@ export default function About() {
         <div className="about__text-container">
           <p className="about__name">My name is Brian</p>
           <p className="about__info">
-            I&#39;m an undergraduate at Colorado State University Global studying computer science,
+            I&#39;m an incoming graduate student studying Computer Science at Northeastern University,
             and I love working on cool projects in machine learning and software development!
           </p>
         </div>
