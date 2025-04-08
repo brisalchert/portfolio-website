@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import StackIcon from "tech-stack-icons";
 import Intellij from "../assets/intellij-idea.png"
 import Pycharm from "../assets/pycharm.png"
+import AndroidStudio from "../assets/android-studio.png"
 import VSCode from "../assets/vscode.png"
 import Numpy from "../assets/numpy.png"
 import Matplotlib from "../assets/matplotlib.png"
@@ -15,19 +16,19 @@ import {forwardRef} from "react";
 const TechStack = forwardRef ((props, ref) => {
   const iconList = () => {
     const techIconNames = [
-      "python", "java", "postgresql", "git",
+      "python", "java", "kotlin", "postgresql", "git",
       "html5", "css3", "js", "reactjs"
     ];
     const techTextNames = [
-      "Python", "Java", "SQL (PostgreSQL)", "Git",
+      "Python", "Java", "Kotlin", "SQL (PostgreSQL)", "Git",
       "HTML", "CSS", "JavaScript", "React"
     ];
     const toolIconNames = [
-      Intellij, Pycharm, VSCode, Numpy,
+      Intellij, Pycharm, AndroidStudio, VSCode, Numpy,
       Matplotlib, Pandas, Pytorch, ScikitLearn
     ];
     const toolTextNames = [
-      "IntelliJ", "PyCharm", "VS Code", "Numpy",
+      "IntelliJ", "PyCharm", "Android Studio", "VS Code", "Numpy",
       "Matplotlib", "Pandas", "PyTorch", "Scikit-Learn"
     ];
 
