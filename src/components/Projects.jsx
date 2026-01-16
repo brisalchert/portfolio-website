@@ -9,11 +9,23 @@ import lstm from "../assets/lstm.png"
 import sudoku from "../assets/sudoku.png"
 import solar from "../assets/solar-system.png"
 import steamTracker from "../assets/steam-tracker.png"
+import calendar from "../assets/calendar-gui.png"
 import arrow from "../assets/arrow.png"
 
 // eslint-disable-next-line react/display-name
 const Projects = forwardRef((props, ref) => {
   const projects = [
+    {
+      projectTitle: "MVC Calendar Java Application",
+      projectTools: "CS5010, Java, MVC Architecture, IntelliJ",
+      projectDescription: "An MVC Java application for scheduling and managing events similar to Google Calendar. " +
+        "The application offers both a CLI and a GUI. Events can be exported as a .csv file or in iCal format to be " +
+        "imported into Google Calendar.\n\nThis project was built using SOLID design principles, " +
+        "incorporating several design patterns (i.e. command, adapter) to avoid common code smells. This ensures " +
+        "the codebase is maintainable, scalable, and highly testable.",
+      projectImage: calendar,
+      projectURL: "https://github.com/brisalchert/cs5010-calendar-final-project"
+    },
     {
       projectTitle: "Steam Tracker Android Application",
       projectTools: "Kotlin, Room Database, Retrofit, Android Studio",
@@ -50,7 +62,7 @@ const Projects = forwardRef((props, ref) => {
     },
     {
       projectTitle: "Sudoku Desktop Application",
-      projectTools: "Java, JavaFX, MVC Design Pattern, IntelliJ",
+      projectTools: "Java, JavaFX, MVC Architecture, IntelliJ",
       projectDescription: "A Java desktop application for playing Sudoku. The program uses a backtracking algorithm " +
         "to generate randomized game boards with only one valid solution.\n\nThe algorithm attempts to fill the " +
         "board randomly by choosing valid candidates for random tiles and then eliminating candidates in other " +
